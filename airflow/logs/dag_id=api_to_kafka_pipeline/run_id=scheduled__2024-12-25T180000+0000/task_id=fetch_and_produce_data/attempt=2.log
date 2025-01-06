@@ -1,0 +1,18 @@
+[2024-12-26T06:16:29.008+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-26T06:16:29.323+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-25T18:00:00+00:00 [queued]>
+[2024-12-26T06:16:30.307+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-25T18:00:00+00:00 [queued]>
+[2024-12-26T06:16:30.315+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-26T06:16:31.926+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_and_produce_data> on 2024-12-25 18:00:00+00:00
+[2024-12-26T06:16:32.722+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=222) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-26T06:16:33.111+0000] {standard_task_runner.py:72} INFO - Started process 278 to run task
+[2024-12-26T06:16:33.215+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'api_to_kafka_pipeline', 'fetch_and_produce_data', 'scheduled__2024-12-25T18:00:00+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/api_to_kafka_dag.py', '--cfg-path', '/tmp/tmp2t3e67m1']
+[2024-12-26T06:16:33.708+0000] {standard_task_runner.py:105} INFO - Job 78: Subtask fetch_and_produce_data
+[2024-12-26T06:16:36.609+0000] {task_command.py:467} INFO - Running <TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-25T18:00:00+00:00 [running]> on host a7d7ef0c0878
+[2024-12-26T06:16:39.530+0000] {job.py:229} INFO - Heartbeat recovered after 11.81 seconds
+[2024-12-26T06:16:40.132+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='api_to_kafka_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_produce_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-25T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-25T18:00:00+00:00'
+[2024-12-26T06:16:40.217+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-26T06:16:40.814+0000] {logging_mixin.py:190} INFO - ✅ Data fetched successfully for IBM at 5min interval.
+[2024-12-26T06:16:40.820+0000] {logging_mixin.py:190} INFO - 🚀 Sending data to Kafka...
+[2024-12-26T12:29:28.372+0000] {job.py:229} INFO - Heartbeat recovered after 20484.43 seconds
+[2024-12-26T13:54:42.154+0000] {job.py:229} INFO - Heartbeat recovered after 5114.07 seconds
+[2024-12-26T16:09:54.195+0000] {job.py:229} INFO - Heartbeat recovered after 665.19 seconds

@@ -1,0 +1,24 @@
+[2024-12-31T01:40:12.112+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-31T01:40:12.316+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-27T17:00:00+00:00 [queued]>
+[2024-12-31T01:40:12.417+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-27T17:00:00+00:00 [queued]>
+[2024-12-31T01:40:12.427+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 3
+[2024-12-31T01:40:12.528+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_and_produce_data> on 2024-12-27 17:00:00+00:00
+[2024-12-31T01:40:12.620+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'api_to_kafka_pipeline', 'fetch_and_produce_data', 'scheduled__2024-12-27T17:00:00+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/api_to_kafka_dag.py', '--cfg-path', '/tmp/tmp2ggvwarb']
+[2024-12-31T01:40:12.626+0000] {standard_task_runner.py:105} INFO - Job 172: Subtask fetch_and_produce_data
+[2024-12-31T01:40:12.711+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=146) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-31T01:40:12.713+0000] {standard_task_runner.py:72} INFO - Started process 170 to run task
+[2024-12-31T01:40:13.216+0000] {task_command.py:467} INFO - Running <TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-27T17:00:00+00:00 [running]> on host d83e04c44ca5
+[2024-12-31T01:40:14.220+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='api_to_kafka_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_produce_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-27T17:00:00+00:00'
+[2024-12-31T01:40:14.311+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-31T01:40:15.110+0000] {api_to_kafka_dag.py:85} INFO - Fetching data for IBM at 5min interval
+[2024-12-31T01:40:22.737+0000] {api_to_kafka_dag.py:93} INFO - Processing and sending data to Kafka
+[2024-12-31T04:03:55.014+0000] {job.py:229} INFO - Heartbeat recovered after 8069.72 seconds
+[2024-12-31T14:15:46.121+0000] {job.py:229} INFO - Heartbeat recovered after 36700.93 seconds
+[2024-12-31T14:15:49.114+0000] {local_task_job_runner.py:228} ERROR - Heartbeat time limit exceeded!
+[2024-12-31T14:15:49.139+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-31T14:15:49.277+0000] {process_utils.py:132} INFO - Sending 15 to group 170. PIDs of all processes in the group: [170]
+[2024-12-31T14:15:49.349+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 170
+[2024-12-31T14:16:50.915+0000] {process_utils.py:150} WARNING - process psutil.Process(pid=170, name='airflow task ru', status='sleeping', started='01:40:12') did not respond to SIGTERM. Trying SIGKILL
+[2024-12-31T14:16:50.919+0000] {process_utils.py:87} INFO - Sending the signal 9 to group 170
+[2024-12-31T14:16:50.927+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=170, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='01:40:12') (170) terminated with exit code -9
+[2024-12-31T14:16:50.928+0000] {standard_task_runner.py:190} ERROR - ('Job 172 was killed before it finished (likely due to running out of memory)', 'For more information, see https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#LocalTaskJob-killed')

@@ -1,0 +1,229 @@
+[2024-12-18T20:06:45.294+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2024-12-18T20:06:45.296+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-12-18T20:06:45.296+0000] {manager.py:485} INFO - Checking for new files in /usr/local/airflow/dags every 300 seconds
+[2024-12-18T20:06:45.297+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:06:45.300+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:11:45.558+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:11:45.567+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:16:45.860+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:16:45.870+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:21:46.695+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:21:47.218+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:26:47.379+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:26:47.392+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:31:48.139+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:31:48.144+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:36:50.037+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:36:50.041+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:41:50.157+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:41:50.175+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:46:50.885+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:46:50.893+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:51:51.766+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:51:51.776+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T20:56:52.769+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T20:56:52.779+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:01:53.358+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:01:53.363+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:06:54.223+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:06:54.229+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:11:54.818+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:11:54.823+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:16:55.207+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:16:55.213+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:21:55.678+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:21:55.686+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:26:56.123+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:26:56.127+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:31:57.150+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:31:57.160+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:36:58.010+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:36:58.017+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:41:58.471+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:41:58.481+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:46:59.243+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:46:59.251+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:51:59.876+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:51:59.892+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T21:57:00.320+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T21:57:00.342+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:02:00.926+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:02:00.933+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:07:01.870+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:07:01.884+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:12:02.460+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:12:02.475+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:17:02.622+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:17:02.636+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:22:02.842+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:22:02.849+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:27:02.985+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:27:02.992+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:32:03.873+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:32:03.887+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:37:04.872+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:37:04.878+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-18T22:42:05.547+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-18T22:42:05.552+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:02:18.544+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:02:19.668+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:07:19.158+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:07:19.182+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:12:19.504+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:12:19.519+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:17:20.238+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:17:20.246+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:22:20.366+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:22:20.383+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:27:20.567+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:27:20.578+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:32:20.663+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:32:20.738+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:37:21.321+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:37:21.336+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:42:22.313+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:42:22.329+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:47:22.369+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:47:22.388+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:52:22.410+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:52:22.428+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T04:57:22.948+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T04:57:22.962+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T05:02:23.300+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T05:02:23.305+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T05:07:24.080+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T05:07:24.095+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T05:12:24.715+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T05:12:24.720+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T10:23:06.525+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:04:46.442+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:04:49.430+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:04:49.456+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:09:49.699+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:09:49.716+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:14:50.084+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:14:50.102+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:29:06.534+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2024-12-19T16:29:06.536+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-12-19T16:29:06.537+0000] {manager.py:485} INFO - Checking for new files in /usr/local/airflow/dags every 300 seconds
+[2024-12-19T16:29:06.539+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:29:06.549+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:34:07.430+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:34:07.432+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:39:07.921+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:39:07.924+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:44:08.614+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:44:08.620+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:49:08.771+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:49:08.774+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:54:08.927+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:54:08.933+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T16:59:09.187+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T16:59:09.195+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:04:10.133+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:04:10.143+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:09:10.967+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:09:10.974+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:14:11.195+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:14:11.200+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:19:11.512+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:19:11.519+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:24:12.250+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:24:12.257+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:29:13.093+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:29:13.097+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:34:13.231+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:34:13.235+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:39:13.249+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:39:13.254+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:44:13.855+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:44:13.866+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:49:14.926+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:49:14.932+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:54:15.065+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:54:15.073+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T17:59:15.616+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T17:59:15.623+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:04:15.667+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:04:15.675+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:09:16.198+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:09:16.205+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:14:16.530+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:14:16.535+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:19:16.671+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:19:16.677+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:24:17.251+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:24:17.264+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:29:17.954+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:29:17.956+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:34:18.026+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:34:18.038+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:39:18.361+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:39:18.372+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:44:18.480+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:44:18.486+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:49:19.028+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:49:19.036+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:54:19.199+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:54:19.205+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T18:59:20.084+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T18:59:20.090+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:04:20.836+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:04:20.841+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:09:21.364+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:09:21.369+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:14:21.718+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:14:21.723+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:19:21.870+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:19:21.876+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:24:23.686+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:24:23.693+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:53:16.866+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:53:16.884+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T19:58:16.968+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T19:58:16.971+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:03:17.413+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:03:17.419+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:08:18.237+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:08:18.240+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:13:19.331+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:13:19.336+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:18:19.667+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:18:19.673+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:23:20.031+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:23:20.046+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:28:20.060+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:28:20.063+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:33:21.082+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:33:21.088+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:38:21.205+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:38:21.216+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:43:21.520+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:43:21.528+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:48:24.232+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:48:24.235+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:53:24.418+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:53:24.425+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T20:58:24.626+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T20:58:24.631+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:03:24.680+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:03:24.690+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:08:24.820+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:08:24.827+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:13:25.120+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:13:25.124+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:18:25.901+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:18:25.908+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:23:27.762+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:23:27.766+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:28:28.074+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:28:28.086+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:33:28.797+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:33:28.802+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-19T21:38:29.548+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-19T21:38:29.564+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags
+[2024-12-20T16:50:19.418+0000] {manager.py:483} INFO - Processing files using up to 1 processes at a time 
+[2024-12-20T16:50:19.419+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-12-20T16:50:19.419+0000] {manager.py:485} INFO - Checking for new files in /usr/local/airflow/dags every 300 seconds
+[2024-12-20T16:50:19.421+0000] {manager.py:821} INFO - Searching for files in /usr/local/airflow/dags
+[2024-12-20T16:50:19.426+0000] {manager.py:824} INFO - There are 0 files in /usr/local/airflow/dags

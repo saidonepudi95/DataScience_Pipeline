@@ -1,0 +1,98 @@
+rules:
+  # Rule to capture the number of active connections to the Zookeeper instance
+  - pattern: "org.apache.ZooKeeperService:name0=Connections,service=Server"
+    name: "zookeeper_connections"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule to capture the number of outstanding requests to the Zookeeper server
+  - pattern: "org.apache.ZooKeeperService:name0=OutstandingRequests,service=Server"
+    name: "zookeeper_outstanding_requests"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule to capture latency statistics
+  - pattern: "org.apache.ZooKeeperService:name0=AvgRequestLatency,service=Server"
+    name: "zookeeper_avg_request_latency"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  - pattern: "org.apache.ZooKeeperService:name0=MaxRequestLatency,service=Server"
+    name: "zookeeper_max_request_latency"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  - pattern: "org.apache.ZooKeeperService:name0=MinRequestLatency,service=Server"
+    name: "zookeeper_min_request_latency"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule to monitor node count (leaders, followers, standalone)
+  - pattern: "org.apache.ZooKeeperService:name0=NumAliveConnections,service=Server"
+    name: "zookeeper_num_alive_connections"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule to monitor the size of the data tree
+  - pattern: "org.apache.ZooKeeperService:name0=NodeCount,service=Server"
+    name: "zookeeper_node_count"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule to capture the server state (leader, follower, standalone)
+  - pattern: "org.apache.ZooKeeperService:name0=ServerState,service=Server"
+    name: "zookeeper_server_state"
+    type: COUNTER
+    labels:
+      instance: "zookeeper"
+
+  # Rule to capture the uptime of the Zookeeper server
+  - pattern: "org.apache.ZooKeeperService:name0=Uptime,service=Server"
+    name: "zookeeper_uptime_seconds"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule to monitor the number of watches
+  - pattern: "org.apache.ZooKeeperService:name0=WatchCount,service=Server"
+    name: "zookeeper_watch_count"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+
+  # Rule for JVM memory usage
+  - pattern: "java.lang<type=Memory><HeapMemoryUsage>"
+    name: "zookeeper_jvm_heap_memory_usage"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+      memory_type: "heap"
+
+  - pattern: "java.lang<type=Memory><NonHeapMemoryUsage>"
+    name: "zookeeper_jvm_non_heap_memory_usage"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"
+      memory_type: "non_heap"
+
+  # Rule for JVM GC stats
+  - pattern: "java.lang<type=GarbageCollector><*>"
+    name: "zookeeper_jvm_gc"
+    type: COUNTER
+    labels:
+      instance: "zookeeper"
+      gc_name: "$1"
+
+  # Rule for JVM thread count
+  - pattern: "java.lang<type=Threading><ThreadCount>"
+    name: "zookeeper_jvm_thread_count"
+    type: GAUGE
+    labels:
+      instance: "zookeeper"

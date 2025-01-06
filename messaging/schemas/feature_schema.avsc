@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "Feature",
+  "namespace": "com.example",
+  "fields": [
+    {
+      "name": "feature_id",
+      "type": "string"
+    },
+    {
+      "name": "feature_name",
+      "type": "string"
+    },
+    {
+      "name": "feature_value",
+      "type": ["null", "double", "string", "int"],
+      "default": null
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis"
+    }
+  ]
+}
