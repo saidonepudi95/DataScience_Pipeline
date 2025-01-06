@@ -1,0 +1,20 @@
+[2024-12-31T01:41:15.236+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-31T01:41:15.263+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-27T20:00:00+00:00 [queued]>
+[2024-12-31T01:41:15.273+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-27T20:00:00+00:00 [queued]>
+[2024-12-31T01:41:15.274+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 3
+[2024-12-31T01:41:15.290+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_and_produce_data> on 2024-12-27 20:00:00+00:00
+[2024-12-31T01:41:15.306+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=242) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-31T01:41:15.302+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'api_to_kafka_pipeline', 'fetch_and_produce_data', 'scheduled__2024-12-27T20:00:00+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/api_to_kafka_dag.py', '--cfg-path', '/tmp/tmpdosvp1b9']
+[2024-12-31T01:41:15.307+0000] {standard_task_runner.py:72} INFO - Started process 246 to run task
+[2024-12-31T01:41:15.308+0000] {standard_task_runner.py:105} INFO - Job 174: Subtask fetch_and_produce_data
+[2024-12-31T01:41:15.377+0000] {task_command.py:467} INFO - Running <TaskInstance: api_to_kafka_pipeline.fetch_and_produce_data scheduled__2024-12-27T20:00:00+00:00 [running]> on host d83e04c44ca5
+[2024-12-31T01:41:15.491+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='api_to_kafka_pipeline' AIRFLOW_CTX_TASK_ID='fetch_and_produce_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-27T20:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-27T20:00:00+00:00'
+[2024-12-31T01:41:15.492+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-31T01:41:15.508+0000] {api_to_kafka_dag.py:85} INFO - Fetching data for IBM at 5min interval
+[2024-12-31T01:41:37.029+0000] {api_to_kafka_dag.py:93} INFO - Processing and sending data to Kafka
+[2024-12-31T04:03:56.314+0000] {job.py:229} INFO - Heartbeat recovered after 8069.72 seconds
+[2024-12-31T14:15:49.362+0000] {job.py:229} INFO - Heartbeat recovered after 36702.89 seconds
+[2024-12-31T14:17:53.247+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-12-31T14:17:53.252+0000] {process_utils.py:132} INFO - Sending 15 to group 246. PIDs of all processes in the group: [246]
+[2024-12-31T14:17:53.348+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 246
+[2024-12-31T14:17:53.448+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses

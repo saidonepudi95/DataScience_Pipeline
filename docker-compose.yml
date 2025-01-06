@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   #############################################
@@ -10,10 +10,17 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+      #JMX_PORT: 8080
+      #KAFKA_OPTS: "-javaagent:/opt/jmx_prometheus_javaagent-0.18.0.jar=8080:/opt/zookeeper.yml"
+
     ports:
       - "2181:2181"
     networks:
       - kafka-network
+    #volumes:
+      #- ./jars/jmx_prometheus_javaagent-0.18.0.jar:/opt/jmx_prometheus_javaagent-0.18.0.jar
+      #- ./jars/zookeeper.yml:/opt/zookeeper.yml
+      
     healthcheck:
       test: ["CMD", "nc", "-z", "localhost", "2181"]
       interval: 30s
@@ -26,7 +33,7 @@ services:
           cpus: '0.5'
 
   kafka:
-    image: confluentinc/cp-kafka:latest
+    image: bitnami/kafka
     container_name: kafka
     depends_on:
       - zookeeper
@@ -40,10 +47,16 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      #JMX_PORT: 9300
+      #KAFKA_OPTS: "-javaagent:/opt/jmx_prometheus_javaagent-0.18.0.jar=9300:/opt/kafka.yml"
     ports:
       - "9092:9092"
+      #- "9300:9300"
     networks:
       - kafka-network
+    #volumes:
+      #- ./jars/jmx_prometheus_javaagent-0.18.0.jar:/opt/jmx_prometheus_javaagent-0.18.0.jar
+      #- ./jars/kafka.yml:/opt/kafka.yml  # Configuration file for metrics
     healthcheck:
       test: ["CMD", "nc", "-z", "localhost", "9092"]
       interval: 30s
@@ -166,31 +179,93 @@ services:
         limits:
           memory: 512M
           cpus: '0.5'
+  ############################################
+  #Monitoring configuration
+  ##############################################
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   container_name: prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus:/etc/prometheus
+  #   networks:
+  #     - kafka-network
+  #   command:
+  #     - '--config.file=/etc/prometheus/prometheus.yml'
 
-  #############################################
+  # #############################################
   # Workflow Management
   #############################################
   airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: apache/airflow:latest
     container_name: airflow
-    environment:
-      AIRFLOW_HOME: /usr/local/airflow
-      _AIRFLOW_WWW_USER_USERNAME: test
-      _AIRFLOW_WWW_USER_PASSWORD: test
-    ports:
-      - "8089:8080"
-    volumes:
-      - ./airflow-logs:/usr/local/airflow/logs  # Mount the logs directory
-      - ./dags:/usr/local/airflow/dags         # Mount the DAGs directory
     command: standalone
-    user: "${UID}:${GID}"  # Run as the current user for permissions
+    environment:
+        # Core Airflow settings
+        AIRFLOW_HOME: /opt/airflow
+        AIRFLOW__CORE__EXECUTOR: LocalExecutor
+        AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+        AIRFLOW__CORE__PARALLELISM: 4
+        AIRFLOW__CORE__DAG_FILE_PROCESSOR_TIMEOUT: 600
+        
+        # Database settings
+        AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:admin@postgres/airflow_db
+        AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 5
+        AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 10
+        AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 1800
+        
+        # Webserver settings
+        AIRFLOW__WEBSERVER__SECRET_KEY: your_secret_key_here
+        AIRFLOW__WEBSERVER__LOG_FETCH_TIMEOUT_SEC: "60"
+        AIRFLOW__WEBSERVER__WORKERS: 2
+        AIRFLOW__WEBSERVER__WORKER_REFRESH_INTERVAL: 30
+        AIRFLOW__WEBSERVER__WORKER_TIMEOUT: 120
+        
+        # Authentication
+        _AIRFLOW_WWW_USER_USERNAME: test
+        _AIRFLOW_WWW_USER_PASSWORD: test
+        
+        # Logging
+        AIRFLOW__LOGGING__BASE_LOG_FOLDER: /opt/airflow/logs
+        AIRFLOW__LOGGING__DAG_PROCESSOR_MANAGER_LOG_LOCATION: /opt/airflow/logs/dag_processor_manager/dag_processor_manager.log
+    ports:
+        - "8089:8080"
+    volumes:
+        - ./airflow/dags:/opt/airflow/dags
+        - ./airflow/logs:/opt/airflow/logs
+        - ./airflow/plugins:/opt/airflow/plugins
+        - ./airflow/config:/opt/airflow/config
+        - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+        postgres:
+            condition: service_healthy
     networks:
-      - kafka-network
+        - kafka-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8089"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
+        test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+        interval: 15s
+        timeout: 10s
+        retries: 3
+        start_period: 40s
+    deploy:
+        resources:
+            limits:
+                memory: 2G
+                cpus: "1.0"
+            reservations:
+                memory: 2G
+                cpus: "1.0"
+    restart: unless-stopped
+    user: "50000:0"
+    ulimits:
+        nofile:
+            soft: 65536
+            hard: 65536
+
 
   #############################################
   # Data Processing
@@ -207,6 +282,9 @@ services:
     ports:
       - "8083:8080"
       - "7077:7077"
+    volumes:
+      - ./spark/data_processing.py:/opt/bitnami/spark/data_processing.py
+      - ./jars/postgresql-42.7.3.jar:/opt/bitnami/spark/jars/postgresql-42.7.3.jar
     networks:
       - kafka-network
     healthcheck:
@@ -234,6 +312,9 @@ services:
       - SPARK_SSL_ENABLED=no
     depends_on:
       - spark-master
+    volumes:
+    - ./spark/data_processing.py:/opt/bitnami/spark/data_processing.py
+    - ./jars/postgresql-42.7.3.jar:/opt/bitnami/spark/jars/postgresql-42.7.3.jar
     networks:
       - kafka-network
     healthcheck:
@@ -247,6 +328,27 @@ services:
           memory: ${SPARK_MEMORY_LIMIT:-2G}
           cpus: ${SPARK_CPU_LIMIT:-2.0}
 
+  zeppelin:
+    image: apache/zeppelin:0.10.1
+    container_name: zeppelin
+    user: "${UID}:${GID}"  # Runs as the current user
+    depends_on:
+      - spark-master
+      - postgres
+    ports:
+      - "8090:8080"
+    volumes:
+      - ./notebook:/zeppelin/notebook
+      - ./jars:/zeppelin/jars
+      - ./spark:/opt/bitnami/spark/bin/spark-submit
+    environment:
+      - ZEPPELIN_LOG_DIR=/zeppelin/logs
+      - SPARK_HOME=/opt/bitnami/spark/bin/spark-submit
+      - MASTER=spark://spark-master:7077
+      - ZEPPELIN_SPARK_USEHIVE=true
+
+
+
 volumes:
   postgres-data:
   cassandra-data:
@@ -254,3 +356,4 @@ volumes:
 networks:
   kafka-network:
     driver: bridge
+    external: true
